@@ -1,0 +1,730 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE6D136C-32C2-4BE5-95B1-B5E6B7C5B2EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiosk</RootNamespace>
+    <AssemblyName>Kiosk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tnt_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlEx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLLs\ControlEx.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLLs\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="IPAddressControlLib, Version=1.2.4446.28646, Culture=neutral, PublicKeyToken=64ca5a4287aa7107, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLLs\IPAddressControlLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\..\..\..\DLLs\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLLs\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\FrmCardCancelInfoNice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelInfoNice.Designer.cs">
+      <DependentUpon>FrmCardCancelInfoNice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelNice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelNice.Designer.cs">
+      <DependentUpon>FrmCardCancelNice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmSalesSearchNice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmSalesSearchNice.Designer.cs">
+      <DependentUpon>FrmSalesSearchNice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmSamPayCancelInfoNice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmSamPayCancelInfoNice.Designer.cs">
+      <DependentUpon>FrmSamPayCancelInfoNice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ABCReport.cs" />
+    <Compile Include="Classes\GrpSales.cs" />
+    <Compile Include="Classes\InpNm.cs" />
+    <Compile Include="Classes\ItemSales.cs" />
+    <Compile Include="Classes\MenuItemProperty.cs" />
+    <Compile Include="Classes\MenuTypeGrp.cs" />
+    <Compile Include="Classes\MonthSales.cs" />
+    <Compile Include="Classes\OneDaySales.cs" />
+    <Compile Include="Classes\SalesCancel.cs" />
+    <Compile Include="Classes\TheDaySales.cs" />
+    <Compile Include="Classes\WoniOrderListSet.cs" />
+    <Compile Include="Controler\DblBuffPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controler\DblBuffPanel.Designer.cs">
+      <DependentUpon>DblBuffPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controler\DoubleBuffer_Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controler\WButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controler\WoniButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controler\WoniButton.Designer.cs">
+      <DependentUpon>WoniButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controler\WoniFillList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controler\WoniFillList.Designer.cs">
+      <DependentUpon>WoniFillList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controler\WoniKeyboardHook.cs" />
+    <Compile Include="Controler\WoniPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controler\WoniPanel.Designer.cs">
+      <DependentUpon>WoniPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBControl\CardAppListDAO.cs" />
+    <Compile Include="DBControl\DBConnectionL.cs" />
+    <Compile Include="DBControl\MenuRepDAO.cs" />
+    <Compile Include="DBControl\ProductDAO.cs" />
+    <Compile Include="DBControl\ReceNoDAO.cs" />
+    <Compile Include="DBControl\SaleDDAO.cs" />
+    <Compile Include="DBControl\SaleHDAO.cs" />
+    <Compile Include="DBControl\CloseKioskDAO.cs" />
+    <Compile Include="DBControl\DBConnection.cs" />
+    <Compile Include="DBControl\MenuGrpCfgDAO.cs" />
+    <Compile Include="DBControl\MenuListCfgDAO.cs" />
+    <Compile Include="DBControl\OpenKioskDAO.cs" />
+    <Compile Include="DBControl\StoreDAO.cs" />
+    <Compile Include="DBControl\VanDataDAO.cs" />
+    <Compile Include="Admin\FrmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmAdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmAdminLogin.Designer.cs">
+      <DependentUpon>FrmAdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmCalendar.Designer.cs">
+      <DependentUpon>FrmCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelDaou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelDaou.Designer.cs">
+      <DependentUpon>FrmCardCancelDaou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelInfoDaou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelInfoDaou.Designer.cs">
+      <DependentUpon>FrmCardCancelInfoDaou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelOk.Designer.cs">
+      <DependentUpon>FrmCardCancelOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmCardCancelProc.Designer.cs">
+      <DependentUpon>FrmCardCancelProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmMenuListToGo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmMenuListToGo.Designer.cs">
+      <DependentUpon>FrmMenuListToGo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Payment\FrmCardPayMent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Payment\FrmCardPayMent.Designer.cs">
+      <DependentUpon>FrmCardPayMent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Payment\FrmCardPayMentDaou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Payment\FrmCardPayMentDaou.Designer.cs">
+      <DependentUpon>FrmCardPayMentDaou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Payment\FrmCardPayMentNice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Payment\FrmCardPayMentNice.Designer.cs">
+      <DependentUpon>FrmCardPayMentNice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmErrorBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmErrorBox.Designer.cs">
+      <DependentUpon>FrmErrorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmHoldMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmHoldMsgBox.Designer.cs">
+      <DependentUpon>FrmHoldMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Payment\FrmInstallment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Payment\FrmInstallment.Designer.cs">
+      <DependentUpon>FrmInstallment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmIPAddressInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmIPAddressInputBox.Designer.cs">
+      <DependentUpon>FrmIPAddressInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmIpPortInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmIpPortInputBox.Designer.cs">
+      <DependentUpon>FrmIpPortInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKeyPad.Designer.cs">
+      <DependentUpon>FrmKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKeyPadNoActive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKeyPadNoActive.Designer.cs">
+      <DependentUpon>FrmKeyPadNoActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKioskClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKioskClose.Designer.cs">
+      <DependentUpon>FrmKioskClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKisokCloseOK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKisokCloseOK.Designer.cs">
+      <DependentUpon>FrmKisokCloseOK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmKisokSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmKisokSetting.Designer.cs">
+      <DependentUpon>FrmKisokSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoadingBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoadingBox.Designer.cs">
+      <DependentUpon>FrmLoadingBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmMenuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmMenuList.Designer.cs">
+      <DependentUpon>FrmMenuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmMsgBox.Designer.cs">
+      <DependentUpon>FrmMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNetworkErr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNetworkErr.Designer.cs">
+      <DependentUpon>FrmNetworkErr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmOrderCancelBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmOrderCancelBox.Designer.cs">
+      <DependentUpon>FrmOrderCancelBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmOrderList.Designer.cs">
+      <DependentUpon>FrmOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Payment\FrmPayMentComple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Payment\FrmPayMentComple.Designer.cs">
+      <DependentUpon>FrmPayMentComple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Payment\FrmPayMentProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Payment\FrmPayMentProc.Designer.cs">
+      <DependentUpon>FrmPayMentProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmProductChoicePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmProductChoicePopup.Designer.cs">
+      <DependentUpon>FrmProductChoicePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmSalesSearchDaou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmSalesSearchDaou.Designer.cs">
+      <DependentUpon>FrmSalesSearchDaou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmSamPayCancelInfoDaou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmSamPayCancelInfoDaou.Designer.cs">
+      <DependentUpon>FrmSamPayCancelInfoDaou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmSetMenuOptPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmSetMenuOptPopup.Designer.cs">
+      <DependentUpon>FrmSetMenuOptPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Payment\FrmSamPayMentNice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Payment\FrmSamPayMentNice.Designer.cs">
+      <DependentUpon>FrmSamPayMentNice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\Payment\FrmSamPayMentDaou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\Payment\FrmSamPayMentDaou.Designer.cs">
+      <DependentUpon>FrmSamPayMentDaou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmStoreInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmStoreInfo.Designer.cs">
+      <DependentUpon>FrmStoreInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmType1Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmType1Popup.Designer.cs">
+      <DependentUpon>FrmType1Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmType2Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmType2Popup.Designer.cs">
+      <DependentUpon>FrmType2Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmType3Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmType3Popup.Designer.cs">
+      <DependentUpon>FrmType3Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IFormMessage.cs" />
+    <Compile Include="Classes\LogMenager.cs" />
+    <Compile Include="MainInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGrpInfo.cs" />
+    <Compile Include="OrderListInfo.cs" />
+    <Compile Include="Classes\PrintHelper\Command.cs" />
+    <Compile Include="Classes\PrintHelper\ImagePrint.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\SplashCardCancelOk.cs" />
+    <Compile Include="Classes\SplashCardCancelProc.cs" />
+    <Compile Include="Classes\SplashInit.cs" />
+    <Compile Include="Classes\SplashKioskClose.cs" />
+    <Compile Include="Classes\SplashPayMentComple.cs" />
+    <Compile Include="Classes\SplashPayMentProc.cs" />
+    <Compile Include="StoreInfo.cs" />
+    <Compile Include="Classes\UtilHelper.cs" />
+    <EmbeddedResource Include="Admin\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmAdminLogin.resx">
+      <DependentUpon>FrmAdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmCalendar.resx">
+      <DependentUpon>FrmCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmCardCancelInfoNice.resx">
+      <DependentUpon>FrmCardCancelInfoNice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmCardCancelNice.resx">
+      <DependentUpon>FrmCardCancelNice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmCardCancelDaou.resx">
+      <DependentUpon>FrmCardCancelDaou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmCardCancelInfoDaou.resx">
+      <DependentUpon>FrmCardCancelInfoDaou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmCardCancelOk.resx">
+      <DependentUpon>FrmCardCancelOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmCardCancelProc.resx">
+      <DependentUpon>FrmCardCancelProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmSalesSearchNice.resx">
+      <DependentUpon>FrmSalesSearchNice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmSamPayCancelInfoNice.resx">
+      <DependentUpon>FrmSamPayCancelInfoNice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controler\DoubleBuffer_Panel.resx">
+      <DependentUpon>DoubleBuffer_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmMenuListToGo.resx">
+      <DependentUpon>FrmMenuListToGo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Payment\FrmCardPayMent.resx">
+      <DependentUpon>FrmCardPayMent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Payment\FrmCardPayMentDaou.resx">
+      <DependentUpon>FrmCardPayMentDaou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Payment\FrmCardPayMentNice.resx">
+      <DependentUpon>FrmCardPayMentNice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmErrorBox.resx">
+      <DependentUpon>FrmErrorBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmHoldMsgBox.resx">
+      <DependentUpon>FrmHoldMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Payment\FrmInstallment.resx">
+      <DependentUpon>FrmInstallment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmIPAddressInputBox.resx">
+      <DependentUpon>FrmIPAddressInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmIpPortInputBox.resx">
+      <DependentUpon>FrmIpPortInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKeyPad.resx">
+      <DependentUpon>FrmKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKioskClose.resx">
+      <DependentUpon>FrmKioskClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKisokCloseOK.resx">
+      <DependentUpon>FrmKisokCloseOK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmKisokSetting.resx">
+      <DependentUpon>FrmKisokSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoadingBox.resx">
+      <DependentUpon>FrmLoadingBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmMenuList.resx">
+      <DependentUpon>FrmMenuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmMsgBox.resx">
+      <DependentUpon>FrmMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNetworkErr.resx">
+      <DependentUpon>FrmNetworkErr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmOrderCancelBox.resx">
+      <DependentUpon>FrmOrderCancelBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmOrderList.resx">
+      <DependentUpon>FrmOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Payment\FrmPayMentComple.resx">
+      <DependentUpon>FrmPayMentComple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Payment\FrmPayMentProc.resx">
+      <DependentUpon>FrmPayMentProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmProductChoicePopup.resx">
+      <DependentUpon>FrmProductChoicePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmSalesSearchDaou.resx">
+      <DependentUpon>FrmSalesSearchDaou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmSamPayCancelInfoDaou.resx">
+      <DependentUpon>FrmSamPayCancelInfoDaou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmSetMenuOptPopup.resx">
+      <DependentUpon>FrmSetMenuOptPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Payment\FrmSamPayMentNice.resx">
+      <DependentUpon>FrmSamPayMentNice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Payment\FrmSamPayMentDaou.resx">
+      <DependentUpon>FrmSamPayMentDaou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmStoreInfo.resx">
+      <DependentUpon>FrmStoreInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmType1Popup.resx">
+      <DependentUpon>FrmType1Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmType2Popup.resx">
+      <DependentUpon>FrmType2Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmType3Popup.resx">
+      <DependentUpon>FrmType3Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInit.resx">
+      <DependentUpon>MainInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_main1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popup_b.png" />
+    <None Include="Resources\popup_check_off.png" />
+    <None Include="Resources\popup_check_on.png" />
+    <None Include="Resources\popup_deadline.png" />
+    <None Include="Resources\popup_end.png" />
+    <None Include="Resources\popup_lookup.png" />
+    <None Include="Resources\popup_n.png" />
+    <None Include="Resources\popup_order.png" />
+    <None Include="Resources\popup_order2.png" />
+    <None Include="Resources\popup_preferences.png" />
+    <None Include="Resources\popup_s.png" />
+    <None Include="Resources\popup_sign.png" />
+    <None Include="Resources\popup_update.png" />
+    <None Include="Resources\견적로고2.png" />
+    <None Include="Resources\bg_admin1.png" />
+    <None Include="Resources\bg_main.png" />
+    <None Include="Resources\bg_main_hold.png" />
+    <None Include="Resources\bg_main_브라더돈까스.png" />
+    <None Include="Resources\bg_menu.png" />
+    <None Include="Resources\bg_set.png" />
+    <None Include="Resources\btn_4.png" />
+    <None Include="Resources\btn_11.png" />
+    <None Include="Resources\btn_21.png" />
+    <None Include="Resources\btn_31.png" />
+    <None Include="Resources\btn_51.png" />
+    <None Include="Resources\btn_61.png" />
+    <None Include="Resources\btn_back.png" />
+    <None Include="Resources\btn_back1.png" />
+    <None Include="Resources\btn_back2.png" />
+    <None Include="Resources\btn_back4.png" />
+    <None Include="Resources\btn_bg_300X100.png" />
+    <None Include="Resources\btn_bg_orange.png" />
+    <None Include="Resources\btn_calc.png" />
+    <None Include="Resources\btn_cancel.png" />
+    <None Include="Resources\btn_cancel_all.png" />
+    <None Include="Resources\btn_card.png" />
+    <None Include="Resources\btn_cardCance.png" />
+    <None Include="Resources\btn_check.png" />
+    <None Include="Resources\btn_check1.png" />
+    <None Include="Resources\btn_check2.png" />
+    <None Include="Resources\btn_chopsticks.png" />
+    <None Include="Resources\btn_chopsticks_over.png" />
+    <None Include="Resources\btn_close1.png" />
+    <None Include="Resources\btn_confirm.png" />
+    <None Include="Resources\btn_continue.png" />
+    <None Include="Resources\btn_eatin.png" />
+    <None Include="Resources\btn_end.png" />
+    <None Include="Resources\btn_exit.png" />
+    <None Include="Resources\btn_hold.png" />
+    <None Include="Resources\btn_left.png" />
+    <None Include="Resources\btn_lookup.png" />
+    <None Include="Resources\btn_minus.png" />
+    <None Include="Resources\btn_minus_big.png" />
+    <None Include="Resources\btn_page_back.png" />
+    <None Include="Resources\btn_page_next.png" />
+    <None Include="Resources\btn_payment.png" />
+    <None Include="Resources\btn_plus.png" />
+    <None Include="Resources\btn_plus_big.png" />
+    <None Include="Resources\btn_pre.png" />
+    <None Include="Resources\btn_print.png" />
+    <None Include="Resources\btn_rad3.png" />
+    <None Include="Resources\btn_radio.png" />
+    <None Include="Resources\btn_radio_over.png" />
+    <None Include="Resources\btn_right.png" />
+    <None Include="Resources\btn_Sales.png" />
+    <None Include="Resources\btn_samsungpay.png" />
+    <None Include="Resources\btn_sclose.png" />
+    <None Include="Resources\btn_set.png" />
+    <None Include="Resources\btn_setting.png" />
+    <None Include="Resources\btn_single.png" />
+    <None Include="Resources\btn_spoon,chopsticks.png" />
+    <None Include="Resources\btn_spoon,chopsticks_over.png" />
+    <None Include="Resources\btn_spoon.png" />
+    <None Include="Resources\btn_spoon_over.png" />
+    <None Include="Resources\btn_storeregi.png" />
+    <None Include="Resources\btn_takeout.png" />
+    <None Include="Resources\btn_title_home_down4.png" />
+    <None Include="Resources\btn_title_home4.png" />
+    <None Include="Resources\btnSamsungPay.png" />
+    <None Include="Resources\Daoulogo.png" />
+    <None Include="Resources\icon_title_eatin.png" />
+    <None Include="Resources\icon_title_eatin_dis.png" />
+    <None Include="Resources\icon_title_takeout.png" />
+    <None Include="Resources\icon_title_takeout_dis.png" />
+    <None Include="Resources\keyboard.png" />
+    <None Include="Resources\kicc.png" />
+    <None Include="Resources\nenel_logo.png" />
+    <None Include="Resources\btn_arrow.png" />
+    <None Include="Resources\btn_arrow_hover.png" />
+    <None Include="Resources\btn_arrow_left.png" />
+    <None Include="Resources\btn_arrow_left_hover.png" />
+    <None Include="Resources\btn_arrow_right.png" />
+    <None Include="Resources\btn_arrow_right_hover.png" />
+    <None Include="Resources\btn_menu_bg.png" />
+    <None Include="Resources\btn_menu_bg_hover.png" />
+    <Content Include="Resources\bg_kiosk_hold_no_time.png" />
+    <None Include="Resources\bg_main_hold_no_time.png" />
+    <Content Include="Resources\popup_order_cancel.png" />
+    <Content Include="tnt_logo.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
